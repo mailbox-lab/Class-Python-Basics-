@@ -1,0 +1,30 @@
+#function to check if a number is prime
+def is_prime(num):
+    """
+    Checks if a number is prime.
+    Returns True if num is a prime number, otherwise False.
+    """
+    if num <= 1:
+        return False
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            return False
+    return True
+
+# Example usage
+print(is_prime(11))  # Output: True
+print(is_prime(4))   # Output: False
+
+#recursive function to calculate sum 
+def recursive_sum(n):
+    """
+    Recursively calculates the sum of all integers from 1 to n.
+    For example, recursive_sum(5) returns 1 + 2 + 3 + 4 + 5 = 15.
+    """
+    if n <= 1:
+        return n
+    else:
+        return n + recursive_sum(n - 1)
+
+# Example usage
+print(recursive_sum(5))  # Output: 15
