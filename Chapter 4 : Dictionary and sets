@@ -1,0 +1,118 @@
+# Example of using dictionary and set in Python
+
+# Dictionary: key-value pairs
+person = {
+    "name": "Alice",
+    "age": 30,
+    "city": "New York"
+}
+
+# Accessing dictionary values
+print(person["name"])  # Output: Alice
+
+# Adding a new key-value pair
+person["email"] = "alice@example.com"
+
+# Dictionary methods and examples
+
+# Accessing values
+print(person["name"])           # Direct access, raises KeyError if not found
+print(person.get("age"))        # Safe access, returns None if not found
+
+# Adding and updating key-value pairs
+person["email"] = "alice@example.com"   # Add new key
+person["age"] = 31                      # Update existing key
+
+# Removing key-value pairs
+removed_city = person.pop("city")       # Removes 'city', returns its value
+print("Removed city:", removed_city)
+del person["email"]                     # Removes 'email' key
+
+# Checking if a key exists
+print("name" in person)                 # True
+print("city" in person)                 # False
+
+# Getting all keys, values, and items
+print(person.keys())                    # dict_keys(['name', 'age'])
+print(person.values())                  # dict_values(['Alice', 31])
+print(person.items())                   # dict_items([('name', 'Alice'), ('age', 31)])
+
+# Copying a dictionary
+person_copy = person.copy()
+print(person_copy)
+
+# Clearing all items
+person_copy.clear()
+print(person_copy)                      # {}
+
+# Updating dictionary with another dictionary
+person.update({"country": "USA", "age": 32})
+
+# Setting default value for a key
+person.setdefault("phone", "N/A")       # Adds 'phone' if not present
+
+# Iterating over dictionary
+for key in person:
+    print(f"Key: {key}, Value: {person[key]}")
+
+for key, value in person.items():
+    print(f"{key}: {value}")
+
+# Nested dictionary example
+contacts = {
+    "Alice": {"phone": "123", "email": "alice@example.com"},
+    "Bob": {"phone": "456", "email": "bob@example.com"}
+}
+print(contacts["Alice"]["email"])
+
+# Dictionary comprehension
+squares = {x: x*x for x in range(5)}
+print(squares)
+
+# Set: unordered collection of unique elements
+fruits = {"apple", "banana", "cherry", "apple"}  # 'apple' appears only once
+
+# Adding an element to set
+fruits.add("orange")
+
+# Removing an element from set
+fruits.discard("banana")
+
+# Iterating over set
+for fruit in fruits:
+    print(fruit)
+    
+    
+# Set methods and examples
+
+# Creating sets
+set_a = {1, 2, 3, 4}
+set_b = {3, 4, 5, 6}
+
+# Union: combines elements from both sets
+union_set = set_a.union(set_b)
+print("Union:", union_set)  # {1, 2, 3, 4, 5, 6}
+
+# Intersection: elements common to both sets
+intersection_set = set_a.intersection(set_b)
+print("Intersection:", intersection_set)  # {3, 4}
+
+# Difference: elements in set_a but not in set_b
+difference_set = set_a.difference(set_b)
+print("Difference:", difference_set)  # {1, 2}
+
+# Symmetric difference: elements in either set, but not both
+sym_diff_set = set_a.symmetric_difference(set_b)
+print("Symmetric Difference:", sym_diff_set)  # {1, 2, 5, 6}
+
+# Checking subset and superset
+print(set_a.issubset(union_set))      # True
+print(union_set.issuperset(set_a))    # True
+
+# Copying a set
+set_c = set_a.copy()
+print("Copied set:", set_c)
+
+# Clearing a set
+set_c.clear()
+print("Cleared set:", set_c)# set()
