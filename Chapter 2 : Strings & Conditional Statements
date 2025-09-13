@@ -1,0 +1,89 @@
+# Example: Working with strings and conditional statements in Python
+
+# String examples
+str1 = "Hello"
+str2 = "World"
+str3 = "Python"
+str4 = ""
+
+# Concatenation
+combined = str1 + " " + str2
+print("Concatenated string:", combined)
+
+# String length
+print("Length of str3:", len(str3))
+
+# String comparison
+if str1 == "Hello":
+    print("str1 is 'Hello'")
+
+if str2 != "Python":
+    print("str2 is not 'Python'")
+
+# Checking empty string
+if not str4:
+    print("str4 is empty")
+
+# Substring check
+if "Py" in str3:
+    print("'Py' found in str3")
+
+# Conditional statements with strings
+user_input = input("Enter your favorite programming language: ")
+
+if user_input.lower() == "python":
+    print("Great choice!")
+elif user_input.lower() == "java":
+    print("Java is popular too.")
+elif user_input == "":
+    print("You didn't enter anything.")
+else:
+    print("That's an interesting choice.")
+
+# String methods and conditionals
+sample = "  example String  "
+if sample.strip().lower().startswith("example"):
+    print("Sample starts with 'example' after stripping and lowering.")
+
+if sample.endswith("String  "):
+    print("Sample ends with 'String  '")
+
+# Additional string functions
+
+# Uppercase and lowercase conversion
+print("Uppercase:", str3.upper())
+print("Lowercase:", str2.lower())
+
+# Replace substring
+replaced = sample.replace("example", "demo")
+print("Replaced string:", replaced)
+
+# Split string
+words = combined.split()
+print("Split words:", words)
+
+# Join list of strings
+joined = "-".join(words)
+print("Joined with hyphen:", joined)
+
+# Find substring position
+pos = str3.find("th")
+print("Position of 'th' in str3:", pos)
+
+# Count occurrences
+count_l = str1.count("l")
+print("Count of 'l' in str1:", count_l)
+
+# Nesting conditional statements with strings
+language = input("Enter a programming language: ")
+if language:
+    if language.lower() == "python":
+        print("You entered Python inside nested if.")
+    else:
+        if "java" in language.lower():
+            print("You mentioned Java in some form.")
+        else:
+            print("Nested: Unrecognized language.")
+else:
+    print("Nested: No input provided.")
+
