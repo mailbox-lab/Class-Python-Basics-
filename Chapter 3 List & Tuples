@@ -1,0 +1,92 @@
+# Example of Lists and Tuples in Python
+
+# List: mutable, can be changed after creation
+fruits_list = ['apple', 'banana', 'cherry']
+fruits_list.append('orange')  # Adding an item
+fruits_list[1] = 'blueberry'  # Modifying an item
+
+print("List:", fruits_list)
+
+# Tuple: immutable, cannot be changed after creation
+fruits_tuple = ('apple', 'banana', 'cherry')
+# fruits_tuple[1] = 'blueberry'  # This would raise an error
+
+print("Tuple:", fruits_tuple)
+
+# Accessing elements
+print("First item in list:", fruits_list[0])
+print("First item in tuple:", fruits_tuple[0])
+
+# List slicing
+print("Sliced list (first two items):", fruits_list[:2])
+print("Sliced tuple (last two items):", fruits_tuple[1:])
+
+# Some common list methods
+fruits_list.insert(2, 'kiwi')        # Insert 'kiwi' at index 2
+fruits_list.remove('apple')          # Remove 'apple' from the list
+popped_item = fruits_list.pop()      # Remove and return the last item
+fruits_list.sort()                   # Sort the list alphabetically
+fruits_list.reverse()                # Reverse the list
+fruits_list.extend(['grape', 'melon']) # Add multiple items to the end
+fruits_list.clear()                  # Remove all items from the list
+fruits_list.append('pear')           # Add 'pear' to the end of the list
+fruits_list.insert(0, 'mango')       # Insert 'mango' at the beginning
+count_pear = fruits_list.count('pear') # Count occurrences of 'pear'
+index_mango = fruits_list.index('mango') # Find index of 'mango'
+copy_list = fruits_list.copy()       # Create a shallow copy of the list
+
+print("Modified list after using methods:", fruits_list)
+print("Popped item:", popped_item)
+print("Count of 'pear':", count_pear)
+print("Index of 'mango':", index_mango)
+print("Copy of list:", copy_list)
+
+
+# Tuple examples
+
+# Creating tuples
+empty_tuple = ()
+single_item_tuple = ('apple',)  # Note the comma
+multi_item_tuple = ('apple', 'banana', 'cherry')
+
+# Accessing elements
+print("Second item in tuple:", multi_item_tuple[1])
+
+# Slicing tuples
+print("Slice tuple (first two):", multi_item_tuple[:2])
+
+# Tuple unpacking
+fruit1, fruit2, fruit3 = multi_item_tuple
+print("Unpacked:", fruit1, fruit2, fruit3)
+
+# Nested tuples
+nested_tuple = ('apple', ('banana', 'cherry'))
+print("Nested tuple:", nested_tuple)
+print("Access nested item:", nested_tuple[1][0])
+
+# Concatenation
+tuple_a = (1, 2)
+tuple_b = (3, 4)
+combined_tuple = tuple_a + tuple_b
+print("Concatenated tuple:", combined_tuple)
+
+# Repetition
+repeated_tuple = ('apple',) * 3
+print("Repeated tuple:", repeated_tuple)
+
+# Length of tuple
+print("Length of multi_item_tuple:", len(multi_item_tuple))
+
+# Membership test
+print("'banana' in multi_item_tuple:", 'banana' in multi_item_tuple)
+
+# Iterating over tuple
+for fruit in multi_item_tuple:
+    print("Tuple item:", fruit)
+
+# Using tuple in functions (returning multiple values)
+def min_max(numbers):
+    return min(numbers), max(numbers)
+
+result = min_max([3, 7, 2, 9])
+print("Min and Max:", result)
