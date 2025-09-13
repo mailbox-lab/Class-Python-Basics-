@@ -1,0 +1,115 @@
+# Arithmetic Operations Examples
+x = 10
+y = 5
+
+# Addition
+z = x + y   # z will be 15
+print(z)        
+# Output: 15
+
+# Multiplication
+z = x * y   # z will be 50
+print(z)
+# Output: 50
+
+# Division
+z = x / y   # z will be 2.0
+print(z)
+# Output: 2.0
+
+# Subtraction
+z = x - y   # z will be 5
+print(z)
+# Output: 5
+
+# Modulus (Remainder)
+z = x % y   # z will be 0
+print(z)
+# Output: 0
+
+# Exponentiation
+z = x ** y  # z will be 100000
+print(z)    
+# Output: 100000
+
+# Floor Division
+z = x // y  # z will be 2
+print(z)
+# Output: 2
+
+# Combined Arithmetic Operations
+z = (x + y) * (x - y)  # z will be 75
+print(z)
+# Output: 75
+
+# Comparison Operations Examples
+
+# Greater Than
+z = x > y  # z will be True
+print(z)
+# Output: True
+
+# Less Than
+z = x < y  # z will be False
+print(z)
+# Output: False
+
+# Equal To
+z = x == y  # z will be False
+print(z)
+# Output: False
+
+# Not Equal To
+z = x != y  # z will be True
+print(z)    
+# Output: True
+
+# Greater Than or Equal To
+z = x >= y  # z will be True
+print(z)
+# Output: True
+
+# Less Than or Equal To
+z = x <= y  # z will be False
+print(z)
+# Output: False
+
+# Logical Operations Examples
+
+# Logical AND
+z = (x > 5) and (y < 10)  # z will be True
+print(z)
+# Output: True
+
+# Logical OR
+z = (x > 5) or (y > 10)   # z will be True
+print(z)
+# Output: True
+
+# Logical NOT
+z = not(x > 5)  # z will be False
+print(z)
+# Output: False 
+
+z = not(y > 10) # z will be True
+print(z)    
+# Output: True
+
+# Conditional Expression (Ternary Operator)
+z = x if x > y else y  # z will be 10
+print(z)    
+# Output: 10
+
+# More Arithmetic Examples
+
+# Average Calculation
+z = (x + y) / 2  # z will be 7.5
+print(z)
+# Output: 7.5
+
+# Weighted Sum
+z = (x * 2) + (y * 3)  # z will be 35
+print(z)
+# Output: 35    
+
+
